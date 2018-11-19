@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs-extra')
 
 const findPkgConfig = filePath => {
   if (isPathExists(path.join(filePath, 'package.json'))) {
