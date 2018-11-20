@@ -15,7 +15,7 @@ function isPathExists(sourcePath) {
   return fs.pathExistsSync(sourcePath)
 }
 
-function getRootPath(filePath) {
+function getRootPath(filePath = path.resolve()) {
   return findPkgConfig(filePath)
 }
 
