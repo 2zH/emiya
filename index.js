@@ -34,6 +34,11 @@ require('yargs')
     desc: 'Run the tests.',
     handler: require('./src/scripts/test')
   })
+  .command({
+    command: ['init'],
+    desc: 'Create a new cargo package in an existing directory.',
+    handler: require('./src/init')
+  })
   // .command({
   //   command: ['build'],
   //   desc: 'Compile the current project.',
