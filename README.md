@@ -1,5 +1,7 @@
 # emiya
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/2zH/emiya.svg)](https://greenkeeper.io/)
+
 ~~Trace on(create) weapons(...) by Gradation Air.~~
 
 Yet another one command line tool for lib/web/node application.
