@@ -36,7 +36,7 @@ require('yargs')
   })
   .command({
     command: ['init'],
-    desc: 'Create a new cargo package in an existing directory.',
+    desc: 'Create a new package in an existing directory.',
     handler: require('./src/init')
   })
   // .command({
