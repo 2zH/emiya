@@ -20,7 +20,7 @@ yarn global add @chuunibyou/emiya
 emiya new <foo> [--web | --node | --lib]
 ```
 
-### Build and execute
+### Execute
 
 ```sh
 emiya run
@@ -30,6 +30,12 @@ emiya run
 
 ```sh
 emiya test
+```
+
+## Build
+
+```sh
+emiya build
 ```
 
 ## Contributing
