@@ -5,8 +5,8 @@ const { getRootPath } = require('../utils/pathHelper')
 const { readFile } = require('../utils/pkgConfig')
 
 const runScripts = ctx => {
-  const { repoType } = readFile(path.resolve('package.json')).config
   const rootPath = getRootPath()
+  const repoType = readFile(rootPath).repoType
 
   if (repoType === 'web') {
     const Bundler = require('parcel-bundler')

@@ -39,11 +39,11 @@ require('yargs')
     desc: 'Create a new package in an existing directory.',
     handler: require('./src/init')
   })
-  // .command({
-  //   command: ['build'],
-  //   desc: 'Compile the current project.',
-  //   handler: require('./src/scripts/build')
-  // })
+  .command({
+    command: ['build'],
+    desc: 'Compile the current project.',
+    handler: require('./src/scripts/build')
+  })
   // .command({
   //   command: ['check'],
   //   desc: 'Analyze the current project, report syntax errors and fix it.',

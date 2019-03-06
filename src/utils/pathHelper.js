@@ -6,7 +6,7 @@ const findPkgConfig = filePath => {
     return filePath
   }
   if (filePath === '/') {
-    return false
+    throw Error(`Can't not find project root path.`)
   }
   return findPkgConfig(path.dirname(filePath))
 }

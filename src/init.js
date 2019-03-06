@@ -2,6 +2,7 @@ const path = require('path')
 const PkgConfig = require('./utils/pkgConfig')
 const { mkdir, echo, from } = require('./utils/fsCombine')
 const codeBase = require('./template/codeBase')
+const { basePkgConfig } = require('./constant')
 
 const createRepo = ctx => {
   const repoType = ['lib', 'node', 'web'].find(
@@ -12,10 +13,12 @@ const createRepo = ctx => {
   const isLib = repoType === 'lib'
   const isWeb = repoType === 'web'
   const code = codeBase[repoType]
+  // TODO: friendly log with duplicated file
   const pkg = PkgConfig
     .from(repoName, {
-      main: isLib ? 'lib.js' : 'index.js',
-      repoType
+      source: `src/${isLib ? 'lib.js' : 'index.js'}`,
+      repoType,
+      ...basePkgConfig
     })
     .toJson()
 
