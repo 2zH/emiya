@@ -27,7 +27,13 @@ const build = () => {
   }
 
   if (pkgConfig.repoType === 'web') {
-    // TODO
+    const Bundler = require('parcel-bundler')
+    const entryFile = path.join(rootPath, 'index.html')
+    const bundler = new Bundler(entryFile, {})
+    bundler.on('buildEnd', () => {
+      console.log('Bundle success')
+    })
+    bundler.bundle()
   }
 
   if (pkgConfig.repoType === 'node') {
